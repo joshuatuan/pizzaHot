@@ -105,7 +105,7 @@ function Order() {
 }
 
 export async function loader({ params }) {
-  // since we cant use hooks (useParams) inside of this function, react router's loader uses {params} to get those shit
+  // since we cant use hooks (useParams) inside of this function, react router's loader uses {params} to get those stuff
   const order = await getOrder(params.orderId); // it's called orderId cause that's what we defined it on the router
   return order;
 }

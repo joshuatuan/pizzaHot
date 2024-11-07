@@ -42,7 +42,7 @@ function CreateOrder() {
   if (!cart.length) return <EmptyCart />;
 
   // notice that in the form, react router automatically handles the onsubmit handlers
-  // also, no states for the input fields, so no onchange and all that shits
+  // also, no states for the input fields, so no onchange and all that stuff
   return (
     <div className="px-4 py-6">
       <h2 className="mb-8 text-xl font-semibold">Ready to order? Let`s go!</h2>

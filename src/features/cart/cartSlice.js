@@ -42,7 +42,7 @@ const cartSlice = createSlice({
       item.totalPrice = item.quantity * item.totalPrice;
       item.quantity--;
 
-      // calling other reducers, we just pass in the same shit
+      // calling other reducers, we just pass in the same stuff
       if (item.quantity === 0) cartSlice.caseReducers.deleteItem(state, action);
     },
     clearCart(state) {
@@ -63,10 +63,10 @@ export default cartSlice.reducer;
 
 // these functions returns a function because useSelector arguments must be a function
 
-// using derived state para makatipid and shit
+// using derived state para makatipid and stuff
 export const getTotalCartQuantity = (state) =>
   state.cart.cart.reduce((sum, item) => sum + item.quantity, 0);
-// breakdown of this shit, so the reduce method takes in a callback function
+// breakdown of this stuff, so the reduce method takes in a callback function
 // sum = accumulator value, item = current element of the cart array
 // for each iteration it will  => sum + item.quantity, 0) add the item quantity to the sum, which initial value is 0
 

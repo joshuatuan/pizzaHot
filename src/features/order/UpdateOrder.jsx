@@ -18,7 +18,7 @@ function UpdateOrder({ order }) {
 
 export default UpdateOrder;
 
-// revalidation shit by the fetcher form. as we update the data, redux will know that and will refetch the Orderdata and rerender the Order component
+// revalidation stuff by the fetcher form. as we update the data, redux will know that and will refetch the Orderdata and rerender the Order component
 export async function action({ request, params }) {
   const data = { priority: true };
 

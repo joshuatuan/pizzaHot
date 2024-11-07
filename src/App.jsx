@@ -14,7 +14,7 @@ import { action as updateOrderAction } from './features/order/UpdateOrder';
 import Menu, { loader as menuLoader } from './features/menu/Menu';
 import Order, { loader as orderLoader } from './features/order/Order';
 
-// new shit, we define the routes paths and elements using this array of objects and shit
+// new stuff, we define the routes paths and elements using this array of objects and stuff
 const router = createBrowserRouter([
   {
     element: <AppLayout />, // layout route, no route

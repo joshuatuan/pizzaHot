@@ -42,7 +42,7 @@ const initialState = {
 };
 
 // redux setup  step 1
-// redux toolkit shit, first create a slice that will contain the:
+// redux toolkit stuff, first create a slice that will contain the:
 const userSlice = createSlice({
   name: 'user', //name of the slice
   initialState, // initial state
@@ -54,7 +54,7 @@ const userSlice = createSlice({
   },
 
   // connecting the thunk actions to the slice, handling the fetch address return
-  // we needa chain this shit
+  // we needa chain this stuff
   extraReducers: (builder) =>
     builder
       .addCase(fetchAddress.pending, (state, action) => {
@@ -71,7 +71,7 @@ const userSlice = createSlice({
       }),
 });
 
-// exporting the shit so that other components can use it
+// exporting the stuff so that other components can use it
 export const { updateName } = userSlice.actions;
 
 export default userSlice.reducer;
