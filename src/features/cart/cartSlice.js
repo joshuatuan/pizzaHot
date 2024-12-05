@@ -32,15 +32,15 @@ const cartSlice = createSlice({
       // finds the pizza first where pizzaId matches
       // item = pointer / reference to the pizza item on the cart
       const item = state.cart.find((item) => item.pizzaId === action.payload);
-      item.totalPrice = item.quantity * item.totalPrice;
       item.quantity++;
+      item.totalPrice = item.quantity * item.unitPrice;
     },
     decreaseItemQuantity(state, action) {
       // payload = itemId / int
 
       const item = state.cart.find((item) => item.pizzaId === action.payload);
-      item.totalPrice = item.quantity * item.totalPrice;
       item.quantity--;
+      item.totalPrice = item.quantity * item.unitPrice;
 
       // calling other reducers, we just pass in the same stuff
       if (item.quantity === 0) cartSlice.caseReducers.deleteItem(state, action);
